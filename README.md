@@ -1,9 +1,9 @@
 # grid-rdf
 Make RDF from the Grid data for organizations, for use with Open VIVO
 
-See http://grid.ac.uk regarding the Grid project.  Grid is by Digital Science.  Grid data is available without license.
+See http://grid.ac regarding the Grid project.  Grid is by Digital Science.  Grid data is available without license.
 
-The download of the Grid data in this repositority is a working copy.
+The download of the Grid data in this repository is a working copy.
 
 ## Goals of this work
 
