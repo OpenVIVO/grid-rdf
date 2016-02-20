@@ -71,6 +71,21 @@ def main():
     for type, count in counts.items():
         print type, '\t', count
 
+    # Frequency table of relationships
+
+    counts = {}
+    for institute in grid:
+        for relationship in institute.get('relationships', []):
+            if 'type' in relationship:
+                type = relationship['type']
+                if type not in counts:
+                    counts[type] = 1
+                else:
+                    counts[type] += 1
+    print "Frequency of types of relationships in Grid data for ", len(grid), "institutes\nType\tCount"
+    for type, count in counts.items():
+        print type, '\t', count
+
     return
 
 
