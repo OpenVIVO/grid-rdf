@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.3.0 concept-map (grid-org.vue) 2016-02-20 -->
+<!-- Tufts VUE 3.3.0 concept-map (grid-org.vue) 2016-03-04 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/Applications/VUE.localized/VUE.app/Contents/Resources/Java/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Sat Feb 20 12:02:31 EST 2016 by mikeconlon on platform Mac OS X 10.11.3 in JVM 1.8.0_66-b17 -->
+<!-- Do Not Remove: Saved date Fri Mar 04 11:34:00 EST 2016 by mikeconlon on platform Mac OS X 10.11.3 in JVM 1.8.0_66-b17 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0" label="grid-org.vue"
     created="1393354945662" x="0.0" y="0.0" width="1.4E-45"
     height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1455987751194" size="47037"
+    <resource referenceCreated="1457109240747" size="47037"
         spec="/Users/mikeconlon/PycharmProjects/grid-rdf/grid2vivo/grid-org.vue"
         type="1" xsi:type="URLResource">
         <title>grid-org.vue</title>
@@ -43,7 +43,7 @@
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
+            <textColor>#EA2218</textColor>
             <font>Arial-plain-14</font>
             <URIString>http://vue.tufts.edu/rdf/resource/ff828d48c0a80499750dfdbfa0dffebc</URIString>
             <shape xsi:type="rectangle"/>
@@ -63,7 +63,7 @@
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
+            <textColor>#EA2218</textColor>
             <font>Arial-plain-14</font>
             <URIString>http://vue.tufts.edu/rdf/resource/ff828d48c0a80499750dfdbfafffecaa</URIString>
             <shape xsi:type="rectangle"/>
@@ -167,8 +167,8 @@
         <ctrlPoint0 x="-648.56433" y="-467.845" xsi:type="point"/>
     </child>
     <child ID="127" label="vcard:URL" layerID="1"
-        created="1440622233083" x="-815.48364" y="-295.0938"
-        width="158.65002" height="157.79895" strokeWidth="2.0"
+        created="1440622233083" x="-775.8336" y="-295.0938"
+        width="124.0" height="117.12346" strokeWidth="2.0"
         autoSized="false" xsi:type="node">
         <fillColor>#FCDBD9</fillColor>
         <strokeColor>#000000</strokeColor>
@@ -176,7 +176,7 @@
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9d0a8703a9013fc0bb29d10683</URIString>
         <child ID="128" label="vcard:url" created="1440622233083"
-            x="48.450012" y="60.149475" width="58.0" height="22.0"
+            x="43.5" y="39.81173" width="58.0" height="22.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -186,7 +186,7 @@
             <shape xsi:type="rectangle"/>
         </child>
         <child ID="131" label="vivo:rank" created="1440622366644"
-            x="48.450012" y="79.649475" width="60.0" height="22.0"
+            x="43.5" y="59.31173" width="60.0" height="22.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -195,28 +195,28 @@
             <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9e0a8703a9013fc0bb868f6752</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="163" label="vivo:homepageURL" created="1455982971161"
-            x="48.450012" y="99.149475" width="120.0" height="22.0"
+        <child ID="208" label="rdfs:label" created="1457108938982"
+            x="43.5" y="78.81173" width="61.0" height="22.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
             <textColor>#000000</textColor>
             <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/ff828d4ac0a80499750dfdbf8ba3452a</URIString>
+            <URIString>http://vue.tufts.edu/rdf/resource/427a8c91c0a801b55682eebc4dff0fba</URIString>
             <shape xsi:type="rectangle"/>
         </child>
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="129" label="vcard:hasURL" layerID="1"
-        created="1440622249643" x="-673.6426" y="-329.75"
-        width="88.15143" height="66.61319" strokeWidth="1.0"
+        created="1440622249643" x="-665.5173" y="-330.25372"
+        width="79.60803" height="58.508392" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9e0a8703a9013fc0bb88054b49</URIString>
-        <point1 x="-585.9912" y="-329.25"/>
-        <point2 x="-673.14264" y="-263.6368"/>
+        <point1 x="-586.40924" y="-329.75372"/>
+        <point2 x="-665.0173" y="-272.24533"/>
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">127</ID2>
     </child>
@@ -296,7 +296,7 @@
         <ID2 xsi:type="node">144</ID2>
     </child>
     <child ID="148"
-        label="Notes:&#xa;    &#xa;    &#xa;      Redirected Grid ID point at successorOrg&#xa;    &#xa;    &#xa;      Parent/Child point at part_of and has_part&#xa;    &#xa;    &#xa;      Affiliated points at affiliated&#xa;    &#xa;    &#xa;      established is new&#xa;    &#xa;    &#xa;      gridId is new&#xa;    &#xa;    &#xa;      isni is new&#xa;    &#xa;    &#xa;      homepageURL is new&#xa;    &#xa;    &#xa;      wikipediaURL is new&#xa;    &#xa;    &#xa;      use has_part rather than subOrganization&#xa;    &#xa;    &#xa;      lat long as geo uri in vcard:geo&#xa;    &#xa;    &#xa;      An org can have more than one address&#xa;    &#xa;    &#xa;      URLs should be at the org level, notthe address level"
+        label="Notes: Redirected Grid ID point at successorOrg Parent/Child point at part_of and has_part Affiliated points at affiliated established is new gridId is new isni is new homepageURL is new wikipediaURL is new use has_part rather than subOrganization lat long as geo uri in vcard:geo An org can have more than one address URLs should be at the org level, notthe address level"
         layerID="1" created="1455982466463" x="-1047.9264"
         y="-722.29486" width="308.0" height="184.0" strokeWidth="0.0"
         autoSized="false" xsi:type="text">
@@ -330,17 +330,17 @@
       Affiliated points at affiliated
     &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font color="#ea2218"&gt;established is new&lt;/font&gt;&lt;font color="#fefb03"&gt;
-&lt;/font&gt;    &lt;/p&gt;
+      &lt;font color="#ea2218"&gt;established is new&lt;/font&gt;&lt;font color="#fefb03"&gt; &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font color="#ea2218"&gt;gridId is new&lt;/font&gt;&lt;font color="#fefb03"&gt;
-&lt;/font&gt;    &lt;/p&gt;
+      &lt;font color="#ea2218"&gt;gridId is new&lt;/font&gt;&lt;font color="#fefb03"&gt; &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font color="#ea2218"&gt;isni is new
-&lt;/font&gt;    &lt;/p&gt;
+      &lt;font color="#ea2218"&gt;isni is new &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font color="#ea2218"&gt;homepageURL is new
-&lt;/font&gt;    &lt;/p&gt;
+      &lt;font color="#ea2218"&gt;homepageURL is new &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
       &lt;font color="#ea2218"&gt;wikipediaURL is new&lt;/font&gt;
     &lt;/p&gt;
@@ -359,54 +359,19 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-        <label>Notes:
-    
-    
-      Redirected Grid ID point at successorOrg
-    
-    
-      Parent/Child point at part_of and has_part
-    
-    
-      Affiliated points at affiliated
-    
-    
-      established is new
-    
-    
-      gridId is new
-    
-    
-      isni is new
-    
-    
-      homepageURL is new
-    
-    
-      wikipediaURL is new
-    
-    
-      use has_part rather than subOrganization
-    
-    
-      lat long as geo uri in vcard:geo
-    
-    
-      An org can have more than one address
-    
-    
-      URLs should be at the org level, notthe address level</label>
+        <label>Notes: Redirected Grid ID point at successorOrg Parent/Child point at part_of and has_part Affiliated points at affiliated established is new gridId is new isni is new homepageURL is new wikipediaURL is new use has_part rather than subOrganization lat long as geo uri in vcard:geo An org can have more than one address URLs should be at the org level, notthe address level</label>
     </child>
     <child ID="152" label="vcard:URL" layerID="1"
-        created="1455982690412" x="-699.9264" y="-224.69485"
-        width="159.0" height="156.4" strokeWidth="2.0" autoSized="false" xsi:type="node">
+        created="1455982690412" x="-678.146" y="-206.54451"
+        width="124.0" height="118.11589" strokeWidth="2.0"
+        autoSized="false" xsi:type="node">
         <fillColor>#FCDBD9</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/ff828d4bc0a80499750dfdbfdc191c07</URIString>
         <child ID="153" label="vcard:url" created="1455982690412"
-            x="51.25" y="59.449997" width="58.0" height="22.0"
+            x="43.5" y="40.307945" width="58.0" height="22.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -416,7 +381,7 @@
             <shape xsi:type="rectangle"/>
         </child>
         <child ID="154" label="vivo:rank" created="1455982690412"
-            x="51.25" y="78.95" width="60.0" height="22.0"
+            x="43.5" y="59.807945" width="60.0" height="22.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -425,28 +390,28 @@
             <URIString>http://vue.tufts.edu/rdf/resource/ff828d4cc0a80499750dfdbf74e4d167</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="164" label="vivo:wikipediaURL"
-            created="1455982996066" x="51.25" y="98.45" width="113.0"
-            height="22.0" strokeWidth="1.0" autoSized="true" xsi:type="node">
+        <child ID="207" label="rdfs:label" created="1457108917130"
+            x="43.5" y="79.307945" width="61.0" height="22.0"
+            strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
             <textColor>#000000</textColor>
             <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/ff828d4cc0a80499750dfdbfb2580390</URIString>
+            <URIString>http://vue.tufts.edu/rdf/resource/427a8c9cc0a801b55682eebcc87e3c49</URIString>
             <shape xsi:type="rectangle"/>
         </child>
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="155" label="vcard:hasURL" layerID="1"
-        created="1455982700113" x="-614.68555" y="-313.51184"
-        width="71.0" height="93.4624" strokeWidth="1.0"
+        created="1455982700113" x="-615.75525" y="-313.27612"
+        width="71.0" height="110.119995" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/ff828d4cc0a80499750dfdbf28007acc</URIString>
-        <point1 x="-563.33484" y="-313.01184"/>
-        <point2 x="-595.03625" y="-220.54944"/>
+        <point1 x="-562.57074" y="-312.77612"/>
+        <point2 x="-597.93976" y="-203.65613"/>
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">152</ID2>
     </child>
@@ -497,7 +462,7 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="170" label="vcard:hasEmail" layerID="1"
-        created="1455983171327" x="-544.4331" y="-314.3625" width="76.0"
+        created="1455983171327" x="-543.9331" y="-314.3625" width="75.0"
         height="114.42493" strokeWidth="1.0" autoSized="false"
         controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
@@ -712,7 +677,7 @@
         width="121.25659" height="36.698914" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
-        <textColor>#4C4C4C</textColor>
+        <textColor>#EA2218</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/ffa1b75ac0a80499750dfdbf276b3caf</URIString>
         <point1 x="-479.38177" y="-609.1743"/>
@@ -773,7 +738,7 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="199" label="rdf:type" layerID="1" created="1455987001638"
-        x="-446.86755" y="-462.56836" width="38.0" height="79.56329"
+        x="-446.36755" y="-462.56836" width="37.0" height="79.56329"
         strokeWidth="1.0" autoSized="false" controlCount="1"
         arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
@@ -816,7 +781,7 @@
         <label>Expressed as a geo uri "geo:25.094190,102.772167"</label>
     </child>
     <child ID="201"
-        label="Grid Types are mapped to VIVO types:&#xa;    &#xa;    &#xa;      Facility no vivo type&#xa;    &#xa;    &#xa;      Company vivo:Company&#xa;    &#xa;    &#xa;      Government  vivo:GovernmentAgency&#xa;    &#xa;    &#xa;      Other no vivo type&#xa;    &#xa;    &#xa;      Healthcare vivo:ClinicalOrganization&#xa;    &#xa;    &#xa;      Nonprofit vivo:Company&#xa;    &#xa;    &#xa;      Education vivo:University&#xa;    &#xa;    &#xa;      Archive no vivo type"
+        label="Grid Types are mapped to VIVO types: Facility no vivo type Company vivo:Company Government  vivo:GovernmentAgency Other no vivo type Healthcare vivo:ClinicalOrganization Nonprofit vivo:Company Education vivo:University Archive no vivo type"
         layerID="1" created="1455987155654" x="-1047.9264"
         y="-227.29486" width="223.0" height="142.0" strokeWidth="0.0"
         autoSized="false" xsi:type="text">
@@ -847,7 +812,7 @@
       Company vivo:Company
     &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      Government  vivo:GovernmentAgency
+      Government vivo:GovernmentAgency
     &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
       Other no vivo type
@@ -870,38 +835,64 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-        <label>Grid Types are mapped to VIVO types:
-    
-    
-      Facility no vivo type
-    
-    
-      Company vivo:Company
-    
-    
-      Government  vivo:GovernmentAgency
-    
-    
-      Other no vivo type
-    
-    
-      Healthcare vivo:ClinicalOrganization
-    
-    
-      Nonprofit vivo:Company
-    
-    
-      Education vivo:University
-    
-    
-      Archive no vivo type</label>
+        <label>Grid Types are mapped to VIVO types: Facility no vivo type Company vivo:Company Government  vivo:GovernmentAgency Other no vivo type Healthcare vivo:ClinicalOrganization Nonprofit vivo:Company Education vivo:University Archive no vivo type</label>
+    </child>
+    <child ID="202" label="vivo:wikipediaURL" layerID="1"
+        created="1457108713110" x="-687.21844" y="-17.463211"
+        width="126.0" height="128.68848" strokeWidth="2.0"
+        autoSized="false" xsi:type="node">
+        <fillColor>#DAA9FF</fillColor>
+        <strokeColor>#000000</strokeColor>
+        <textColor>#EA2218</textColor>
+        <font>Arial-plain-12</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/427a8ca8c0a801b55682eebc7de7b7f5</URIString>
+        <shape xsi:type="ellipse"/>
+    </child>
+    <child ID="203" label="rdf:type" layerID="1" created="1457108773757"
+        x="-650.4105" y="-89.93677" width="37.0" height="73.72534"
+        strokeWidth="1.0" autoSized="false" controlCount="1"
+        arrowState="2" xsi:type="link">
+        <strokeColor>#000000</strokeColor>
+        <textColor>#4C4C4C</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/427a8ca8c0a801b55682eebcb5f10317</URIString>
+        <point1 x="-626.6441" y="-89.43677"/>
+        <point2 x="-631.52356" y="-16.711426"/>
+        <ID1 xsi:type="node">152</ID1>
+        <ID2 xsi:type="node">202</ID2>
+        <ctrlPoint0 x="-634.7371" y="-44.686188" xsi:type="point"/>
+    </child>
+    <child ID="204" label="vivo:homepageURL" layerID="1"
+        created="1457108833666" x="-835.041" y="-110.53465"
+        width="133.4" height="128.68848" strokeWidth="2.0"
+        autoSized="false" xsi:type="node">
+        <fillColor>#DAA9FF</fillColor>
+        <strokeColor>#000000</strokeColor>
+        <textColor>#EA2218</textColor>
+        <font>Arial-plain-12</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/427a8ca9c0a801b55682eebcbf5d81e5</URIString>
+        <shape xsi:type="ellipse"/>
+    </child>
+    <child ID="205" label="rdf:type" layerID="1" created="1457108833666"
+        x="-789.9152" y="-191.64398" width="37.846497" height="82.20697"
+        strokeWidth="1.0" autoSized="false" controlCount="1"
+        arrowState="2" xsi:type="link">
+        <strokeColor>#000000</strokeColor>
+        <textColor>#4C4C4C</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/427a8ca9c0a801b55682eebc7a8086ff</URIString>
+        <point1 x="-752.5687" y="-191.14398"/>
+        <point2 x="-774.48975" y="-109.93701"/>
+        <ID1 xsi:type="node">127</ID1>
+        <ID2 xsi:type="node">204</ID2>
+        <ctrlPoint0 x="-779.3012" y="-159.82" xsi:type="point"/>
     </child>
     <layer ID="1" label="Layer 1" created="1393354945802" x="0.0"
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/6a822fa280fd5714007fcd7edc120198</URIString>
     </layer>
-    <userZoom>1.0</userZoom>
-    <userOrigin x="-1199.9264" y="-767.29486"/>
+    <userZoom>0.8264301921611134</userZoom>
+    <userOrigin x="-933.038" y="-697.0801"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1393354945644"
