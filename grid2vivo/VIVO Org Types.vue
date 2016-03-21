@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.3.0 concept-map (VIVO Org Types.vue) 2016-03-12 -->
+<!-- Tufts VUE 3.3.0 concept-map (VIVO Org Types.vue) 2016-03-19 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/Applications/VUE.localized/VUE.app/Contents/Resources/Java/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Sat Mar 12 10:51:12 EST 2016 by mikeconlon on platform Mac OS X 10.11.3 in JVM 1.8.0_66-b17 -->
+<!-- Do Not Remove: Saved date Sat Mar 19 17:40:24 EDT 2016 by mikeconlon on platform Mac OS X 10.11.3 in JVM 1.8.0_66-b17 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0"
     label="VIVO Org Types.vue" created="1457553978734" x="0.0" y="0.0"
     width="1517.3334" height="752.49994" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1457797872209" size="53731"
+    <resource referenceCreated="1458423624232" size="53745"
         spec="/Users/mikeconlon/Desktop/VIVO Org Types.vue" type="1" xsi:type="URLResource">
         <title>VIVO Org Types.vue</title>
         <property key="File" value="/Users/mikeconlon/Desktop/VIVO Org Types.vue"/>
@@ -232,9 +232,10 @@
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b0ec0a801b56e7adf5da29631c6</URIString>
         <shape arcwidth="20.0" archeight="20.0" xsi:type="roundRect"/>
     </child>
-    <child ID="42" label="NonProfit" layerID="1" created="1457554785434"
-        x="130.0" y="143.38535" width="100.0" height="61.0"
-        strokeWidth="1.0" strokeStyle="4" autoSized="false" xsi:type="node">
+    <child ID="42" label="NonProfitCompany" layerID="1"
+        created="1457554785434" x="130.0" y="143.38535" width="115.0"
+        height="61.0" strokeWidth="1.0" strokeStyle="4"
+        autoSized="false" xsi:type="node">
         <fillColor>#FFFFFF</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
@@ -242,41 +243,42 @@
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b0fc0a801b56e7adf5d5fe0f7dd</URIString>
         <shape arcwidth="20.0" archeight="20.0" xsi:type="roundRect"/>
     </child>
-    <child ID="43" layerID="1" created="1457554838114" x="179.5"
-        y="118.0" width="1.0" height="25.885345" strokeWidth="1.0"
-        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+    <child ID="43" layerID="1" created="1457554838114" x="182.16342"
+        y="117.99988" width="3.1731567" height="25.885498"
+        strokeWidth="1.0" autoSized="false" controlCount="0"
+        arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b0fc0a801b56e7adf5df9887b9a</URIString>
-        <point1 x="180.0" y="143.38535"/>
-        <point2 x="180.0" y="118.5"/>
+        <point1 x="184.83658" y="143.38538"/>
+        <point2 x="182.66342" y="118.49988"/>
         <ID1 xsi:type="node">42</ID1>
         <ID2 xsi:type="node">31</ID2>
     </child>
-    <child ID="45" layerID="1" created="1457555168234" x="201.31451"
-        y="203.88535" width="15.704285" height="21.558838"
+    <child ID="45" layerID="1" created="1457555168234" x="206.0098"
+        y="203.88535" width="13.813736" height="21.558838"
         strokeWidth="1.0" autoSized="false" controlCount="0"
         arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b10c0a801b56e7adf5d000c4151</URIString>
-        <point1 x="216.5188" y="224.94418"/>
-        <point2 x="201.81451" y="204.38535"/>
+        <point1 x="219.32352" y="224.94418"/>
+        <point2 x="206.50978" y="204.38535"/>
         <ID1 xsi:type="node">33</ID1>
         <ID2 xsi:type="node">42</ID2>
     </child>
-    <child ID="46" layerID="1" created="1457555192570" x="145.90268"
-        y="203.88533" width="14.527969" height="21.558868"
+    <child ID="46" layerID="1" created="1457555192570" x="148.70741"
+        y="203.88535" width="16.418518" height="21.558853"
         strokeWidth="1.0" autoSized="false" controlCount="0"
         arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b11c0a801b56e7adf5d5edaa932</URIString>
-        <point1 x="146.40268" y="224.9442"/>
-        <point2 x="159.93065" y="204.38533"/>
+        <point1 x="149.20741" y="224.94418"/>
+        <point2 x="164.62593" y="204.38533"/>
         <ID1 xsi:type="node">17</ID1>
         <ID2 xsi:type="node">42</ID2>
     </child>
@@ -305,7 +307,7 @@
         <ID1 xsi:type="node">12</ID1>
         <ID2 xsi:type="node">27</ID2>
     </child>
-    <child ID="49" label="HealthCareOrganization" layerID="1"
+    <child ID="49" label="HealthcareOrganization" layerID="1"
         created="1457555269659" x="-55.0" y="57.5" width="144.0"
         height="61.0" strokeWidth="1.0" strokeStyle="4"
         autoSized="false" xsi:type="node">
@@ -552,7 +554,7 @@
         <ID2 xsi:type="node">6</ID2>
     </child>
     <child ID="73"
-        label="Notes &#xa;    &#xa;    &#xa;      &#xa;    &#xa;    &#xa;      1. Some current &quot;organization types&quot; appear &#xa;      to be functions rather than organizations &#xa;    &#xa;    &#xa;      2. Some proposed &quot;organization types&quot; also &#xa;      appear to be functions rather organization types: AdvocacyOrganization, &#xa;      for example &#xa;    &#xa;    &#xa;      3. Some proposed org types appear to be &#xa;      affiliations rather than types &quot;ReligiousOrganization&quot; for example&#xa;    &#xa;    &#xa;      4. Some types appear to have multiple &#xa;      meanings.  Does &quot;college&quot; mean a small free-standing higher education &#xa;      organization such as Dickinson College, or does it mean a college of a &#xa;      university, or does it mean a residential college as seen at Oxford or &#xa;      Yale? School is also unclear"
+        label="Notes 1. Some current &quot;organization types&quot; appear &#xa;      to be functions rather than organizations 2. Some proposed &quot;organization types&quot; also &#xa;      appear to be functions rather organization types: AdvocacyOrganization, for example 3. Some proposed org types appear to be affiliations rather than types &quot;ReligiousOrganization&quot; for example 4. Some types appear to have multiple meanings.  Does &quot;college&quot; mean a small free-standing higher education &#xa;      organization such as Dickinson College, or does it mean a college of a university, or does it mean a residential college as seen at Oxford or &#xa;      Yale? School is also unclear"
         layerID="1" created="1457559770336" x="-22.391724" y="451.57275"
         width="397.0" height="285.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
         <strokeColor>#404040</strokeColor>
@@ -589,11 +591,11 @@
     &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
       &lt;font style="font-size:16;"&gt;3. Some proposed org types appear to be 
-      affiliations rather than types &amp;quot;ReligiousOrganization&amp;quot; for example
-&lt;/font&gt;    &lt;/p&gt;
+      affiliations rather than types &amp;quot;ReligiousOrganization&amp;quot; for example &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
       &lt;font style="font-size:16;"&gt;4. Some types appear to have multiple 
-      meanings.  Does &amp;quot;college&amp;quot; mean a small free-standing higher education 
+      meanings. Does &amp;quot;college&amp;quot; mean a small free-standing higher education 
       organization such as Dickinson College, or does it mean a college of a 
       university, or does it mean a residential college as seen at Oxford or 
       Yale? School is also unclear&lt;/font&gt;
@@ -601,29 +603,10 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-        <label>Notes 
-    
-    
-      
-    
-    
-      1. Some current "organization types" appear 
-      to be functions rather than organizations 
-    
-    
-      2. Some proposed "organization types" also 
-      appear to be functions rather organization types: AdvocacyOrganization, 
-      for example 
-    
-    
-      3. Some proposed org types appear to be 
-      affiliations rather than types "ReligiousOrganization" for example
-    
-    
-      4. Some types appear to have multiple 
-      meanings.  Does "college" mean a small free-standing higher education 
-      organization such as Dickinson College, or does it mean a college of a 
-      university, or does it mean a residential college as seen at Oxford or 
+        <label>Notes 1. Some current "organization types" appear 
+      to be functions rather than organizations 2. Some proposed "organization types" also 
+      appear to be functions rather organization types: AdvocacyOrganization, for example 3. Some proposed org types appear to be affiliations rather than types "ReligiousOrganization" for example 4. Some types appear to have multiple meanings.  Does "college" mean a small free-standing higher education 
+      organization such as Dickinson College, or does it mean a college of a university, or does it mean a residential college as seen at Oxford or 
       Yale? School is also unclear</label>
     </child>
     <child ID="75" layerID="1" created="1457561906390" x="-364.50003"
@@ -738,7 +721,7 @@
 </richText>
         </child>
         <child ID="72"
-            label="Other &quot;groups of people&quot;&#xa;    &#xa;    &#xa;      &#xa;    &#xa;    &#xa;      Committee &#xa;    &#xa;    &#xa;      Club &#xa;    &#xa;    &#xa;      Board of Directors"
+            label="Other &quot;groups of people&quot; Committee Club Board of Directors"
             created="1457559659868" x="5.6672974" y="0.0" width="193.0"
             height="99.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
             <strokeColor>#404040</strokeColor>
@@ -759,11 +742,11 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font style="font-size:16;"&gt;Other &amp;quot;groups of people&amp;quot;
-&lt;/font&gt;    &lt;/p&gt;
+      &lt;font style="font-size:16;"&gt;Other &amp;quot;groups of people&amp;quot; &lt;/font&gt;
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
-      &lt;font style="font-size:16;"&gt;
-&lt;/font&gt;    &lt;/p&gt;
+      
+    &lt;/p&gt;
     &lt;p color="#000000" style="color: #000000"&gt;
       &lt;font style="font-size:16;"&gt;Committee &lt;/font&gt;
     &lt;/p&gt;
@@ -776,23 +759,11 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-            <label>Other "groups of people"
-    
-    
-      
-    
-    
-      Committee 
-    
-    
-      Club 
-    
-    
-      Board of Directors</label>
+            <label>Other "groups of people" Committee Club Board of Directors</label>
         </child>
     </child>
     <child ID="79"
-        label="Taxonomy of Organizations&#xa;    &#xa;    &#xa;      &#xa;    &#xa;    &#xa;      All relationships are &quot;is_a&quot;&#xa;    &#xa;    &#xa;      Dotted lines indicate proposed organization types"
+        label="Taxonomy of Organizations All relationships are &quot;is_a&quot; Dotted lines indicate proposed organization types"
         layerID="1" created="1457793723210" x="-369.169" y="-114.27135"
         width="570.0" height="106.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
         <strokeColor>#404040</strokeColor>
@@ -827,16 +798,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-        <label>Taxonomy of Organizations
-    
-    
-      
-    
-    
-      All relationships are "is_a"
-    
-    
-      Dotted lines indicate proposed organization types</label>
+        <label>Taxonomy of Organizations All relationships are "is_a" Dotted lines indicate proposed organization types</label>
     </child>
     <child ID="80" layerID="1" created="1457795093892" x="438.27982"
         y="451.57275" width="358.33334" height="270.3708"
@@ -982,7 +944,7 @@
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/5d880b27c0a801b56e7adf5ded3e7600</URIString>
     </layer>
-    <userZoom>0.7768234585884514</userZoom>
+    <userZoom>0.49428609894724157</userZoom>
     <userOrigin x="-373.406" y="-116.76866"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
