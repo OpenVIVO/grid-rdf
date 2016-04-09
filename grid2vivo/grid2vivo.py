@@ -11,15 +11,18 @@ import logging
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2016 (c) Michael Conlon"
 __license__ = "Apache License 2.0"
-__version__ = "0.01"
+__version__ = "0.02"
 
 #   Constants
 
 uri_prefix = "http://openvivo.org/a/"
 vivo_prefix = "http://vivoweb.org/ontology/core#"
 foaf_prefix = "http://xmlns.com/foaf/0.1/"
+vcard_prefix = "http://www.w3.org/2006/vcard/ns#"
+
 VIVO = Namespace(vivo_prefix)
 FOAF = Namespace(foaf_prefix)
+VCARD = Namespace(vcard_prefix)
 
 # Setup logging
 
@@ -29,6 +32,7 @@ logging.basicConfig()
 
 
 def add_external_ids(uri, inst):
+    g = Graph()
     if 'external_ids' in inst:
         if 'ISNI' in inst['external_ids']:
             for isni in inst['external_ids']['ISNI']:
@@ -36,25 +40,32 @@ def add_external_ids(uri, inst):
         if 'FundRef' in inst['external_ids']:
             for fund_ref in inst['external_ids']['FundRef']:
                 g.add((uri, VIVO.fundRefId, Literal(fund_ref)))
+    return g
 
 
 def add_acronyms(uri, inst):
+    g = Graph()
     if 'acronyms' in inst:
         for acronym in inst['acronyms']:
             g.add((uri, VIVO.abbreviation, Literal(acronym)))
+    return g
 
 
 def add_aliases(uri, inst):
+    g = Graph()
     if 'aliases' in inst:
         for alias in inst['aliases']:
             g.add((uri, RDFS.label, Literal(alias)))
+    return g
 
 
 def add_established(uri, inst):
+    g = Graph()
     if 'established' in inst and inst['established'] is not None:
         year = str(inst['established'])
         date_uri = URIRef(uri_prefix + 'date' + year)
         g.add((uri, VIVO.dateEstablished, date_uri))
+    return g
 
 
 def add_type(uri, inst):
@@ -71,14 +82,17 @@ def add_type(uri, inst):
         'Education': VIVO.EducationOrganization,
         'Archive': 	VIVO.ArchiveOrganization
     }
+    g = Graph()
     if 'types' in inst:
             for grid_type in inst['types']:
                 vivo_type = type_table.get(grid_type, None)
                 if vivo_type is not None:
                     g.add((uri, RDF.type, vivo_type))
+    return g
 
 
 def add_relationships(uri, inst):
+    g = Graph()
     if 'relationships' in inst:
         for relationship in inst['relationships']:
             to_uri = URIRef(uri_prefix + relationship['id'])
@@ -92,6 +106,7 @@ def add_relationships(uri, inst):
                 g.add((uri, VIVO.hasSuperOrganization, to_uri))  # sub class of BFO_0000050 (part of)
             else:
                 raise KeyError(relationship_type)
+    return g
 
 
 def add_vcard(uri, inst):
@@ -102,10 +117,10 @@ def add_vcard(uri, inst):
     if 'addresses' not in inst or len(inst['addresses']) == 0:
         return
 
+    g = Graph()
     address = inst['addresses'][0]
     url_rank = 0
 
-    VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
     vcard_uri = URIRef(str(uri)+'-vcard')
     g.add((vcard_uri, RDF.type, VCARD.organization))
     g.add((uri, VIVO.hasContactInfo, vcard_uri))
@@ -134,21 +149,22 @@ def add_vcard(uri, inst):
 
     #   Add geolocation
 
-    if 'lat' in address and address['lat'] is not None and 'lng' in address and address['lng'] is not None:
+    if 'lat' in address and address['lat'] is not None and len(str(address['lat'])) > 0 and 'lng' in address and \
+            address['lng'] is not None and len(str(address['lng'])) > 0:
         vcard_geo_uri = URIRef(str(vcard_uri) + '-geo')
         g.add((vcard_uri, VCARD.hasGeo, vcard_geo_uri))
         g.add((vcard_geo_uri, VCARD.geo, Literal('geo:'+str(address['lat'])+','+str(address['lng']))))
 
     #   Add Email
 
-    if 'email_address' in inst and inst['email_address'] is not None:
+    if 'email_address' in inst and inst['email_address'] is not None and len(inst['email_address']) > 0:
         vcard_email_uri = URIRef(str(vcard_uri) + '-email')
         g.add((vcard_uri, VCARD.hasEmail, vcard_email_uri))
         g.add((vcard_email_uri, VCARD.email, Literal(inst['email_address'])))
 
     #   Add Wikipedia URL
 
-    if 'wikipedia_url' in inst and inst['wikipedia_url'] is not None:
+    if 'wikipedia_url' in inst and inst['wikipedia_url'] is not None and len(inst['wikipedia_url']) > 0:
         url_rank += 1
         vcard_wikipedia_uri = URIRef(str(vcard_uri) + '-wikipedia')
         g.add((vcard_uri, VCARD.hasURL, vcard_wikipedia_uri))
@@ -171,6 +187,7 @@ def add_vcard(uri, inst):
                 else:
                     link_text = "Additional Link"
                 g.add((vcard_link_uri, RDFS.label, Literal(link_text)))
+    return g
 
 
 def make_grid_rdf(inst):
@@ -185,46 +202,51 @@ def make_grid_rdf(inst):
     #   TODO: Handle status other than 'active' (include 'redirect')
     #   TODO: Handle 'weight'
 
+    g = Graph()
     uri = URIRef(uri_prefix + inst['id'])
 
     g.add((uri, RDF.type, FOAF.Organization))
     g.add((uri, VIVO.gridId, Literal(inst['id'])))
     g.add((uri, RDFS.label, Literal(inst['name'])))
 
-    add_external_ids(uri, inst)
-    add_acronyms(uri, inst)
-    add_type(uri, inst)
-    add_established(uri, inst)
-    add_relationships(uri, inst)
-    add_aliases(uri, inst)
-    add_vcard(uri, inst)  # handles wikipedia_url, links, addresses, geolocation, and email_address
+    g += add_external_ids(uri, inst)
+    g += add_acronyms(uri, inst)
+    g += add_type(uri, inst)
+    g += add_established(uri, inst)
+    g += add_relationships(uri, inst)
+    g += add_aliases(uri, inst)
+    g += add_vcard(uri, inst)  # handles wikipedia_url, links, addresses, geolocation, and email_address
+    return g
 
 
-g = Graph()
+#   Main starts here
 
-#   Read the Grid organization data
+if __name__ == '__main__':
+    grid_graph = Graph()
 
-grid_file = open('../grid/grid.json')
-grid_all = json.load(grid_file)
+    #   Read the Grid organization data
 
-version = grid_all['version']
-print 'Grid', version
+    grid_file = open('../grid/grid.json')
+    grid_all = json.load(grid_file)
 
-grid = grid_all['institutes']
-print len(grid), "institutes"
+    version = grid_all['version']
+    print 'Grid', version
 
-#   Make RDF for each active institute
+    grid = grid_all['institutes']
+    print len(grid), "institutes"
 
-count = 0
-for institute in grid:
-    count += 1
-    if count % 100 == 0:
-        print count
-    if institute['status'] == 'active':
-        make_grid_rdf(institute)
+    #   Make RDF for each active institute
 
-#   Generate the RDF file
+    count = 0
+    for institute in grid:
+        count += 1
+        if count % 100 == 0:
+            print count
+        if institute['status'] == 'active':
+            grid_graph += make_grid_rdf(institute)
 
-triples_file = open('grid.rdf', 'w')
-print >>triples_file, g.serialize(format='nt')
-triples_file.close()
+    #   Generate the RDF file
+
+    triples_file = open('grid.rdf', 'w')
+    print >>triples_file, grid_graph.serialize(format='n3')
+    triples_file.close()
