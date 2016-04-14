@@ -102,6 +102,9 @@ def add_relationships(uri, inst):
             if relationship_type == 'Affiliated':
                 g.add((uri, VIVO.hasAffiliatedOrganization, to_uri))
                 g.add((to_uri, VIVO.hasAffiliatedOrganization, uri))  # own inverse
+            elif relationship_type == 'Related':
+                g.add((uri, VIVO.hasRelatedOrganization, to_uri))
+                g.add((to_uri, VIVO.hasRelatedOrganziation, uri))  # own inverse
             elif relationship_type == 'Child':
                 g.add((uri, OBO.BFO_0000051, to_uri))
                 g.add((uri, VIVO.hasSubOrganization, to_uri))  # sub class of BFO_0000051 (has part)
