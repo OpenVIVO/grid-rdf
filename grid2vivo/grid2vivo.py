@@ -11,7 +11,7 @@ import logging
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2016 (c) Michael Conlon"
 __license__ = "Apache License 2.0"
-__version__ = "0.02"
+__version__ = "0.03"
 
 #   Constants
 
@@ -23,6 +23,7 @@ vcard_prefix = "http://www.w3.org/2006/vcard/ns#"
 VIVO = Namespace(vivo_prefix)
 FOAF = Namespace(foaf_prefix)
 VCARD = Namespace(vcard_prefix)
+OBO = Namespace('http://purl.obolibrary.org/obo/')
 
 # Setup logging
 
@@ -65,6 +66,7 @@ def add_established(uri, inst):
         year = str(inst['established'])
         date_uri = URIRef(uri_prefix + 'date' + year)
         g.add((uri, VIVO.dateEstablished, date_uri))
+        g.add((uri, VIVO.dateTimeValue, date_uri))
     return g
 
 
@@ -101,8 +103,10 @@ def add_relationships(uri, inst):
                 g.add((uri, VIVO.hasAffiliatedOrganization, to_uri))
                 g.add((to_uri, VIVO.hasAffiliatedOrganization, uri))  # own inverse
             elif relationship_type == 'Child':
+                g.add((uri, OBO.BFO_0000051, to_uri))
                 g.add((uri, VIVO.hasSubOrganization, to_uri))  # sub class of BFO_0000051 (has part)
             elif relationship_type == 'Parent':
+                g.add((uri, OBO.BFO_0000050, to_uri))
                 g.add((uri, VIVO.hasSuperOrganization, to_uri))  # sub class of BFO_0000050 (part of)
             else:
                 raise KeyError(relationship_type)
@@ -122,13 +126,16 @@ def add_vcard(uri, inst):
     url_rank = 0
 
     vcard_uri = URIRef(str(uri)+'-vcard')
-    g.add((vcard_uri, RDF.type, VCARD.organization))
+    g.add((vcard_uri, RDF.type, VCARD.Organization))
     g.add((uri, VIVO.hasContactInfo, vcard_uri))
+    g.add((uri, OBO.ARG_2000028, vcard_uri))
 
     #   Add Address
 
     vcard_address_uri = URIRef(str(vcard_uri) + '-address')
+    g.add((vcard_address_uri, RDF.type, VCARD.Address))
     g.add((vcard_uri, VCARD.hasAddress, vcard_address_uri))
+
     if 'city' in address and address['city'] is not None and len(address['city']) > 0:
         g.add((vcard_address_uri, VCARD.locality, Literal(address['city'])))
     if 'postcode' in address and address['postcode'] is not None and len(address['postcode']) > 0:
@@ -153,12 +160,14 @@ def add_vcard(uri, inst):
             address['lng'] is not None and len(str(address['lng'])) > 0:
         vcard_geo_uri = URIRef(str(vcard_uri) + '-geo')
         g.add((vcard_uri, VCARD.hasGeo, vcard_geo_uri))
+        g.add((vcard_uri, RDF.type, VCARD.Geo))
         g.add((vcard_geo_uri, VCARD.geo, Literal('geo:'+str(address['lat'])+','+str(address['lng']))))
 
     #   Add Email
 
     if 'email_address' in inst and inst['email_address'] is not None and len(inst['email_address']) > 0:
         vcard_email_uri = URIRef(str(vcard_uri) + '-email')
+        g.add((vcard_email_uri, RDF.type, VCARD.Email))
         g.add((vcard_uri, VCARD.hasEmail, vcard_email_uri))
         g.add((vcard_email_uri, VCARD.email, Literal(inst['email_address'])))
 
@@ -167,8 +176,10 @@ def add_vcard(uri, inst):
     if 'wikipedia_url' in inst and inst['wikipedia_url'] is not None and len(inst['wikipedia_url']) > 0:
         url_rank += 1
         vcard_wikipedia_uri = URIRef(str(vcard_uri) + '-wikipedia')
+        g.add((vcard_wikipedia_uri, RDF.type, VCARD.URL))
+        g.add((vcard_wikipedia_uri, RDF.type, VIVO.WikipediaURL))
         g.add((vcard_uri, VCARD.hasURL, vcard_wikipedia_uri))
-        g.add((vcard_wikipedia_uri, VCARD.url, URIRef(inst['wikipedia_url'].strip())))
+        g.add((vcard_wikipedia_uri, VCARD.url, Literal(inst['wikipedia_url'].strip(), datatype=XSD.anyURI)))
         g.add((vcard_wikipedia_uri, VIVO.rank, Literal(str(url_rank), datatype=XSD.integer)))
         g.add((vcard_wikipedia_uri, RDFS.label, Literal('Wikipedia Page')))
 
@@ -179,11 +190,13 @@ def add_vcard(uri, inst):
             if link is not None and len(link) > 0:
                 url_rank += 1
                 vcard_link_uri = URIRef(str(vcard_uri) + '-link' + str(url_rank))
+                g.add((vcard_link_uri, RDF.type, VCARD.URL))
                 g.add((vcard_uri, VCARD.hasURL, vcard_link_uri))
-                g.add((vcard_link_uri, VCARD.url, URIRef(link.strip())))
+                g.add((vcard_link_uri, VCARD.url, Literal(link.strip(), datatype=XSD.anyURI)))
                 g.add((vcard_link_uri, VIVO.rank, Literal(str(url_rank), datatype=XSD.integer)))
                 if link == inst['links'][0]:
                     link_text = "Home Page"
+                    g.add((vcard_link_uri, RDF.type, VIVO.HomePageURL))
                 else:
                     link_text = "Additional Link"
                 g.add((vcard_link_uri, RDFS.label, Literal(link_text)))
