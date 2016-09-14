@@ -11,7 +11,7 @@ import logging
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2016 (c) Michael Conlon"
 __license__ = "Apache License 2.0"
-__version__ = "0.03"
+__version__ = "0.04"
 
 #   Constants
 
@@ -24,6 +24,7 @@ VIVO = Namespace(vivo_prefix)
 FOAF = Namespace(foaf_prefix)
 VCARD = Namespace(vcard_prefix)
 OBO = Namespace('http://purl.obolibrary.org/obo/')
+SKOS = Namespace('http://www.w3.org/2004/02/skos/core#')
 
 # Setup logging
 
@@ -36,11 +37,11 @@ def add_external_ids(uri, inst):
     g = Graph()
     if 'external_ids' in inst:
         if 'ISNI' in inst['external_ids']:
-            for isni in inst['external_ids']['ISNI']:
-                g.add((uri, VIVO.isni, Literal(isni)))
+            for isni in inst['external_ids']['ISNI']['all']:
+                g.add((uri, VIVO.isni, Literal(isni.strip())))
         if 'FundRef' in inst['external_ids']:
-            for fund_ref in inst['external_ids']['FundRef']:
-                g.add((uri, VIVO.fundRefId, Literal(fund_ref)))
+            for fund_ref in inst['external_ids']['FundRef']['all']:
+                g.add((uri, VIVO.fundRefId, Literal(fund_ref.strip())))
     return g
 
 
@@ -56,7 +57,7 @@ def add_aliases(uri, inst):
     g = Graph()
     if 'aliases' in inst:
         for alias in inst['aliases']:
-            g.add((uri, RDFS.label, Literal(alias)))
+            g.add((uri, SKOS.altLabel, Literal(alias)))
     return g
 
 
@@ -71,8 +72,6 @@ def add_established(uri, inst):
 
 
 def add_type(uri, inst):
-
-    #   TODO: Handle type 'Facility' (not an organization?)
 
     type_table = {
         'Facility': None,
@@ -111,6 +110,8 @@ def add_relationships(uri, inst):
             elif relationship_type == 'Parent':
                 g.add((uri, OBO.BFO_0000050, to_uri))
                 g.add((uri, VIVO.hasSuperOrganization, to_uri))  # sub class of BFO_0000050 (part of)
+            elif relationship_type == 'Other':
+                pass
             else:
                 raise KeyError(relationship_type)
     return g
@@ -155,7 +156,7 @@ def add_vcard(uri, inst):
     if 'state' in address and address['state'] is not None and len(address['state']) > 0:
         g.add((vcard_address_uri, VCARD.region, Literal(address['state'])))
     if 'country' in address and address['country'] is not None and len(address['country']) > 0:
-        g.add((vcard_address_uri, VCARD.country, Literal(address['country'])))
+        g.add((vcard_address_uri, VCARD['country-name'], Literal(address['country'])))
 
     #   Add geolocation
 
@@ -215,8 +216,7 @@ def make_grid_rdf(inst):
     :param inst: a dict containing the institute's Grid data
     :return:
     """
-    #   TODO: Handle status other than 'active' (include 'redirect')
-    #   TODO: Handle 'weight'
+    # TODO: Handle status other than 'active' (include 'redirect')
 
     g = Graph()
     uri = URIRef(uri_prefix + inst['id'])
@@ -224,6 +224,7 @@ def make_grid_rdf(inst):
     g.add((uri, RDF.type, FOAF.Organization))
     g.add((uri, VIVO.gridId, Literal(inst['id'])))
     g.add((uri, RDFS.label, Literal(inst['name'])))
+    g.add((uri, SKOS.prefLabel, Literal(inst['name'])))
 
     g += add_external_ids(uri, inst)
     g += add_acronyms(uri, inst)
