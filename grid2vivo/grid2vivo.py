@@ -264,6 +264,6 @@ if __name__ == '__main__':
 
     #   Generate the RDF file
 
-    triples_file = open('grid.rdf', 'w')
+    triples_file = open('grid.n3', 'w')
     print >>triples_file, grid_graph.serialize(format='n3')
     triples_file.close()

@@ -25,3 +25,5 @@ longer asserted as rdf:label, now asserted as skos:altLabel.  Primary name is no
 skos:prefLabel. Skip relationship type "other".  Handle new identifier format in GRID JSON -- Fundref and ISNI now have
 substructure, an "all" list and a "preferred" value.  all the values are processed.  VIVO does not have the notion of
 preferred isni or preferred fundref, these are ignored.  Strips leading and trailing whitespace from identifiers.
+
+**2016-09-19** 0.05 Resulting RDF file is named `grid.n3` It is an RDF file in N3 format.
