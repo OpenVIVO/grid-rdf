@@ -9,7 +9,7 @@ import json
 import logging
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2016 (c) Michael Conlon"
+__copyright__ = "Copyright 2017 (c) Michael Conlon"
 __license__ = "Apache License 2.0"
 __version__ = "0.04"
 
