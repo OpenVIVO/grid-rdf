@@ -1,8 +1,8 @@
 # grid-rdf
-Make RDF from the Grid data for organizations, for use with Open VIVO
+Make RDF from the Grid data for organizations, for use with Open VIVO and with other VIVOs.
 
-See http://grid.ac regarding the Grid project.  Grid is by Digital Science.  Grid data is available via CC-BY license, 
-see citation below.
+See http://grid.ac regarding the Grid project.  Grid is by Digital Science.  Grid data is available via CC-BY license. 
+See citation below.
 
 The download of the Grid data in this repository is a working copy.
 
@@ -10,8 +10,8 @@ The download of the Grid data in this repository is a working copy.
 
 1. Produce RDF of organizations for use with OpenVIVO -- OpenVIVO debuted at http://force16.org in Portland, 
 April 17-19, 2016
-1. Consider how best to provide an RDF package or service for VIVO
-1. Consider how VIVO might interact with such an RDF package or service
+1. Consider how best to provide an RDF data package or service for VIVO
+1. Consider how VIVO might interact with such an RDF data package or service
 
 ## Data Citation
 
