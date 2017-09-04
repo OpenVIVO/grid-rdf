@@ -27,4 +27,5 @@ substructure, an "all" list and a "preferred" value.  all the values are process
 preferred isni or preferred fundref, these are ignored.  Strips leading and trailing whitespace from identifiers.
 
 **2016-09-19** 0.05 Resulting RDF file is named `grid.n3` It is an RDF file in N3 format.
+
 **2017-09-04** Data updated from Grid release 2017-08-10
